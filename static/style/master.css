@@ -17,7 +17,7 @@
     margin: 0;
     font-family: 'Tajawal', sans-serif;
 }
-div.container {
+.container {
     width: 1000px;
     margin: 0 auto;
 }

@@ -4,7 +4,7 @@ nav {
     height: 70px;
 }
 nav a {
-    color: black;
+    color: var(--primary-text-color);
 }
 nav div#name label {
     font-size: 25px;

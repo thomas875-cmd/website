@@ -30,7 +30,7 @@ a:hover {
     cursor: pointer;
 }
 @media (max-width: 1000px) {
-    div.container {
+    .container {
         width: 90%;
     }
 }

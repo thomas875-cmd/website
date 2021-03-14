@@ -17,7 +17,7 @@
     margin: 0;
     font-family: 'Tajawal', sans-serif;
 }
-div.container {
+.container {
     width: 1000px;
     margin: 0 auto;
 }
@@ -30,7 +30,7 @@ a:hover {
     cursor: pointer;
 }
 @media (max-width: 1000px) {
-    div.container {
+    .container {
         width: 90%;
     }
 }

@@ -3,10 +3,10 @@
 :root {
     --main-color: #4150ff;
 
-    --main-background-color: white;
+    --primary-background-color: white;
     --secondary-background-color: #cbcbcb;
 
-    --main-text-color: black;
+    --primary-text-color: black;
     --secondary-text-color: #484848;
 
     --anchor-text-color: #00a6ff;

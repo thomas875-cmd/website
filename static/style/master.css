@@ -4,7 +4,11 @@
     --main-color: #4150ff;
 
     --main-background-color: white;
-    --secondary-background-color: #cbcbcb;
+    --secondary-background-color: #f7f7f7;
+
+    
+    --main-border-color: #cfcfcf;
+    --secondary-border-color: #f0f0f0;
 
     --main-text-color: black;
     --secondary-text-color: #484848;

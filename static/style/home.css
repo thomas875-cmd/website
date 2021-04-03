@@ -14,6 +14,44 @@ header p {
 	font-size: 20px;
 	margin-top: -10px;
 }
+section#articles {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 50px 0;
+}
+section#articles div.article {
+	width: 300px;
+	height: 200px;
+	background: var(--secondary-background-color);
+	margin: 0 50px;
+	border-radius: 30px;
+	border: 1px solid var(--secondary-border-color);
+	box-shadow: 0 10px 15px rgb(238, 238, 238);
+}
+section#articles div.article div.author {
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid var(--main-border-color);
+	padding: 10px 20px;
+}
+section#articles div.article div.author label {
+	font-size: 20px;
+	margin-right: 20px;
+}
+section#articles div.article div.author img {
+	width: 50px;
+	border-radius: 50%;
+}
+section#articles div.article div.content {
+	padding: 20px;
+}
+section#articles div.article div.content p {
+	font-size: 15px;
+}
+section#articles div.article div.content a {
+	font-size: 15px;
+}
 @media (max-width: 900px) {
 	header {
 		padding: 50px 0;

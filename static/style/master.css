@@ -1,41 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Tajawal&display=swap');
 
 :root {
-    --main-color: #4150ff;
+	--main-color: #4150ff;
 
-    --main-background-color: white;
-    --secondary-background-color: #f7f7f7;
+	--main-background-color: white;
+	--secondary-background-color: #f7f7f7;
 
-    
-    --main-border-color: #cfcfcf;
-    --secondary-border-color: #f0f0f0;
+	
+	--main-border-color: #cfcfcf;
+	--secondary-border-color: #f0f0f0;
 
-    --main-text-color: black;
-    --secondary-text-color: #484848;
+	--main-text-color: black;
+	--secondary-text-color: #484848;
 
-    --anchor-text-color: #00a6ff;
+	--anchor-text-color: #00a6ff;
 }
 
 * {
-    padding: 0;
-    margin: 0;
-    font-family: 'Tajawal', sans-serif;
-    direction: rtl;
+	padding: 0;
+	margin: 0;
+	font-family: 'Tajawal', sans-serif;
+	direction: rtl;
 }
 .container {
-    width: 1000px;
-    margin: 0 auto;
+	width: 1000px;
+	margin: 0 auto;
 }
 a {
-    color: var(--anchor-text-color);
-    text-decoration: none;
+	color: var(--anchor-text-color);
+	text-decoration: none;
 }
 a:hover {
-    text-decoration: underline;
-    cursor: pointer;
+	text-decoration: underline;
+	cursor: pointer;
 }
 @media (max-width: 1000px) {
-    .container {
-        width: 90%;
-    }
+	.container {
+		width: 90%;
+	}
 }

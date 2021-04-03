@@ -37,7 +37,7 @@ nav div#buttons button {
     font-size: 30px;
     background: none;
     border: none;
-    margin-left: 20px;
+    margin-right: 20px;
     display: none;
 }
 @media (max-width: 800px) {

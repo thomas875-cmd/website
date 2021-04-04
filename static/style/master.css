@@ -9,12 +9,9 @@
 	
 	--primary-border-color: #cfcfcf;
 	--secondary-border-color: #f0f0f0;
-  
-  --primary-background-color: white;
-  --secondary-background-color: #cbcbcb;
-
-  --primary-text-color: black;
-  --secondary-text-color: #484848;
+	
+	--primary-text-color: black;
+	--secondary-text-color: #484848;
 
 	--main-text-color: black;
 	--secondary-text-color: #484848;
@@ -41,7 +38,7 @@ a:hover {
 	cursor: pointer;
 }
 @media (max-width: 1000px) {
-    .container {
-        width: 90%;
-    }
+	.container {
+		width: 90%;
+	}
 }

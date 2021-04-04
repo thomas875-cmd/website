@@ -27,13 +27,13 @@ section#articles div.article {
 	margin: 0 50px;
 	border-radius: 10px;
 	border: 1px solid var(--secondary-border-color);
-	border-bottom: 5px solid var(--main-border-color);
+	border-bottom: 5px solid var(--primary-border-color);
 	box-shadow: 0 10px 15px rgb(238, 238, 238);
 }
 section#articles div.article div.author {
 	display: flex;
 	align-items: center;
-	border-bottom: 1px solid var(--main-border-color);
+	border-bottom: 1px solid var(--primary-border-color);
 	padding: 10px 20px;
 }
 section#articles div.article div.author label {

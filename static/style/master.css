@@ -72,4 +72,7 @@ footer p {
 	.container {
 		width: 90%;
 	}
+	footer div#links ul {
+		margin: 0 5%;
+	}
 }

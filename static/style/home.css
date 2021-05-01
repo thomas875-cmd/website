@@ -30,6 +30,7 @@ section#articles div.article {
 	border: 1px solid var(--secondary-border-color);
 	border-bottom: 5px solid var(--primary-border-color);
 	box-shadow: 0 10px 15px rgb(238, 238, 238);
+	color: var(--primary-text-color);
 }
 section#articles div.article div.author {
 	display: flex;
@@ -75,7 +76,7 @@ section#collaboration div p {
 	font-size: 25px;
 	margin-bottom: 20px;
 }
-	section#collaboration div a {
+section#collaboration div a {
 	background: black;
 	color: white;
 	font-size: 20px;

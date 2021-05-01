@@ -75,7 +75,7 @@ section#collaboration div p {
 	font-size: 25px;
 	margin-bottom: 20px;
 }
-section#collaboration div a {
+	section#collaboration div a {
 	background: black;
 	color: white;
 	font-size: 20px;
@@ -108,16 +108,16 @@ section#collaboration div a {
 		padding-bottom: 50px;
 	}
 	section#collaboration img {
-		width: 400px;
+		width: 250px;
 	}
 	section#collaboration div {
 		text-align: center;
 		margin: 0;
 	}
 	section#collaboration div h1 {
-		font-size: 50px;
+		font-size: 30px;
 	}
 	section#collaboration div p {
-		font-size: 25px;
+		font-size: 20px;
 	}
 }

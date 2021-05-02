@@ -114,6 +114,7 @@ section#collaboration div a {
 	section#collaboration div {
 		text-align: center;
 		margin: 0;
+		width: auto;
 	}
 	section#collaboration div h1 {
 		font-size: 30px;

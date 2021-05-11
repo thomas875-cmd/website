@@ -36,5 +36,35 @@ class AuthService {
 			}
 		}
 	}
+	async logInEmail(email, password) {
+		if(email.length == 0 ||
+		password.length == 0) {
+			
+			throw new Error("الرجاء كتابة جميع الخانات");
+		}
+		else {
+			try {
+				await firebase.auth().signInWithEmailAndPassword(email, password);
+
+			}
+			catch(error) {
+				if(error.code == "auth/invalid-email") {
+					throw new Error("هذا البريد الالكتروني خاطئ");
+				}
+				else if(error.code == "auth/user-disabled") {
+					throw new Error("تم ايقاف هذا الحساب");
+				}
+				else if(error.code == "auth/user-not-found") {
+					throw new Error("هذا الحساب غير موجود");
+				}
+				else if(error.code == "auth/wrong-password") {
+					throw new Error("كلمة المرور خاطئة");
+				}
+				else {
+					throw new Error("حدث خطأ");
+				}
+			}
+		}
+	}
 
 }

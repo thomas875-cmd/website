@@ -18,22 +18,24 @@ section#articles {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin: 50px 0;
+	margin: 100px auto;
 }
 section#articles div.article {
 	width: 300px;
+	flex: 1;
 	height: 200px;
 	background: var(--secondary-background-color);
-	margin: 0 50px;
+	margin: 0 30px;
 	border-radius: 10px;
 	border: 1px solid var(--secondary-border-color);
-	border-bottom: 5px solid var(--main-border-color);
+	border-bottom: 5px solid var(--primary-border-color);
 	box-shadow: 0 10px 15px rgb(238, 238, 238);
+	color: var(--primary-text-color);
 }
 section#articles div.article div.author {
 	display: flex;
 	align-items: center;
-	border-bottom: 1px solid var(--main-border-color);
+	border-bottom: 1px solid var(--primary-border-color);
 	padding: 10px 20px;
 }
 section#articles div.article div.author label {
@@ -53,8 +55,71 @@ section#articles div.article div.content p {
 section#articles div.article div.content a {
 	font-size: 15px;
 }
+section#collaboration {
+	background: var(--main-color);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+}
+section#collaboration img {
+	width: 600px;
+}
+section#collaboration div {
+	margin-right: 50px;
+	width: 500px;
+}
+section#collaboration div h1 {
+	font-size: 50px;
+}
+section#collaboration div p {
+	font-size: 25px;
+	margin-bottom: 20px;
+}
+section#collaboration div a {
+	background: black;
+	color: white;
+	font-size: 20px;
+	padding: 10px 20px;
+	border-radius: 5px;
+	text-decoration: none;
+}
+@media (max-width: 1200px) {
+	section#collaboration img {
+		width: 500px;
+	}
+	section#collaboration div {
+		margin-right: 50px;
+		width: 400px;
+	}
+}
 @media (max-width: 900px) {
 	header {
 		padding: 50px 0;
+	}
+	section#articles {
+		flex-direction: column;
+	}
+	section#articles div.article {
+		margin: 30px 0;
+		flex: none;
+	}
+	section#collaboration {
+		flex-direction: column;
+		padding-bottom: 50px;
+	}
+	section#collaboration img {
+		width: 250px;
+	}
+	section#collaboration div {
+		text-align: center;
+		margin: 0;
+		width: auto;
+	}
+	section#collaboration div h1 {
+		font-size: 30px;
+	}
+	section#collaboration div p {
+		font-size: 20px;
 	}
 }

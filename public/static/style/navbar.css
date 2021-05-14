@@ -75,7 +75,7 @@ nav div#buttons button {
 	font-size: 30px;
 	background: none;
 	border: none;
-	margin-right: 20px;
+	margin-right: 10px;
 	display: none;
 }
 @media (max-width: 1100px) {
@@ -84,11 +84,24 @@ nav div#buttons button {
 	}
 }
 @media (max-width: 700px) {
+	nav {
+		margin: 0 20px;
+	}
+	nav div#profile {
+		flex: 3;
+	}
+	nav div#profile a.button {
+		font-size: 25px;
+	}
 	nav div#buttons {
 		justify-content: flex-end;
 	}
+	nav div#buttons a {
+		font-size: 25px;
+	}
 	nav div#buttons button {
 		display: initial;
+		font-size: 25px;
 	}
 	nav ul {
 		position: fixed;

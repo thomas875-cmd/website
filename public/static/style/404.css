@@ -26,3 +26,11 @@ section#error div a {
 	border-radius: 5px;
 	text-decoration: none;
 }
+@media (max-width: 900px) {
+	section#error {
+		flex-direction: column-reverse;
+	}
+	section#error div {
+		width: auto;
+	}
+}

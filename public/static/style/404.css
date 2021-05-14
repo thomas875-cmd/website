@@ -1,0 +1,36 @@
+section#error {
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	justify-content: center;
+	margin: 100px 0;
+}
+section#error div {
+	width: 400px;
+}
+section#error div img {
+	width: 300px;
+}
+section#error div h1 {
+	font-size: 60px;
+}
+section#error div p {
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+section#error div a {
+	background: black;
+	color: white;
+	font-size: 20px;
+	padding: 10px 20px;
+	border-radius: 5px;
+	text-decoration: none;
+}
+@media (max-width: 900px) {
+	section#error {
+		flex-direction: column-reverse;
+	}
+	section#error div {
+		width: auto;
+	}
+}

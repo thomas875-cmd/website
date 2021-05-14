@@ -52,6 +52,15 @@ nav div#profile a.button {
 	font-size: 30px;
 	margin-right: 10px;
 }
+nav div#profile a.login {
+	background: var(--secondary-background-color);
+	font-size: 17px;
+	padding: 5px 10px;
+	border-radius: 10px;
+	border: 2px solid var(--secondary-border-color);
+	text-decoration: none;
+	text-align: center;
+}
 nav div#buttons {
 	display: flex;
 	flex-direction: row-reverse;

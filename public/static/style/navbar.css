@@ -105,7 +105,8 @@ nav div#buttons button {
 		transition: right .5s;
 	}
 	nav ul.opened {
-		right: 0%;
+		right: 15%;
+		box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 	}
 	nav ul li {
 		margin: 10px 0;

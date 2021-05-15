@@ -38,3 +38,6 @@ form button {
 	border: none;
 	border-radius: 3px;
 }
+form p {
+	font-size: 15px;
+}

@@ -4,7 +4,7 @@ const firebaseConfig = {
 	projectId: "thearabfuture",
 	storageBucket: "thearabfuture.appspot.com",
 	messagingSenderId: "135828096117",
-	appId: "1:135828096117:web:ba87abb4d288545a72e43c"
+	appId: "1:135828096117:web:869804e8f6de74e172e43c"
 };
 
 firebase.initializeApp(firebaseConfig);

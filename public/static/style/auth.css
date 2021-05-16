@@ -14,6 +14,17 @@ form h1 {
 	font-size: 40px;
 	margin-bottom: 50px;
 }
+form h3#error {
+	margin: -25px 0 15px 0;
+	background: rgba(255, 0, 0, 0.2);
+	border: 3px solid red;
+	font-size: 17px;
+	width: 60%;
+	text-align: center;
+	padding: 5px 10px;
+	border-radius: 5px;
+	display: none;
+}
 form div {
 	position: relative;
 	width: 70%;
@@ -37,4 +48,16 @@ form button {
 	padding: 10px 20px;
 	border: none;
 	border-radius: 3px;
+}
+form p {
+	font-size: 15px;
+}
+
+@media (max-width: 500px) {
+	form {
+		width: 90%;
+	}
+	form div {
+		width: 80%;
+	}
 }

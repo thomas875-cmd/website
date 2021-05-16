@@ -52,14 +52,14 @@
 			<div>
 				<label>البريد الاكتروني:</label>
 				<br>
-				<input type="email" name="email" placeholder="salint@thearabfuture.com">
+				<input type="email" id="email" placeholder="salintofficial@hotmail.com">
 			</div>
 			<div>
 				<label>كلمة السر:</label>
 				<br>
-				<input type ="password" name="password" placeholder="•••••••••">
+				<input type ="password" id="password" placeholder="•••••••••">
 			</div>
-			<button>تسجيل الدخول</button>
+			<button type="submit">تسجيل الدخول</button>
 			<p>ليس لديك حساب؟ <a href="signup.html">إنشاء حساب</a></p>
 		</form>
 
@@ -91,6 +91,29 @@
 		<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-firestore.js"></script>
 
 		<script src="./services/FirebaseService.js"></script>
+		<script src="./services/AuthService.js"></script>
+
+		<script>
+			const auth = new AuthService();
+			const error = document.getElementById("error");
+
+			document.querySelector("form").addEventListener("submit", async (e) => {
+				e.preventDefault();
+
+				try {
+					error.style.display = "none";
+
+					await auth.logInEmail(document.getElementById("email").value, 
+										document.getElementById("password").value);
+
+					window.location = "index.html";
+				}
+				catch({ message }) {
+					error.style.display = "initial";
+					error.innerText = message;
+				}
+			});
+		</script>
 
 		<script src="./static/scripts/Navbar.js"></script>
 	</body>

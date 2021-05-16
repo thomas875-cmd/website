@@ -110,9 +110,14 @@
 
 			const auth = new AuthService();
 			const error = document.getElementById("error");
+			const fields = document.querySelectorAll("input, button");
 
 			document.querySelector("form").addEventListener("submit", async (e) => {
 				e.preventDefault();
+
+				fields.forEach(element => {
+					element.disabled = true;
+				});
 
 				try {
 					error.style.display = "none";
@@ -127,6 +132,10 @@
 				catch({ message }) {
 					error.style.display = "initial";
 					error.innerText = message;
+
+					fields.forEach(element => {
+						element.disabled = false;
+					});
 				}
 			});
 		</script>

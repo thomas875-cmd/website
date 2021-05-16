@@ -48,6 +48,11 @@ form button {
 	padding: 10px 20px;
 	border: none;
 	border-radius: 3px;
+	cursor: pointer;
+}
+form button:disabled {
+	opacity: 0.2;
+	cursor: default;
 }
 form p {
 	font-size: 15px;

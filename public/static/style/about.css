@@ -1,0 +1,25 @@
+.about{
+    background-color: #808080cc;
+    padding:10px 10px 30px 10px ;
+    height:300px
+}
+
+.about h1{
+    width:120px;
+    margin:50px auto;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 4px solid #8a1111;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+    border-radius: 30%;
+    padding:0px 3px 5px 5px;
+}
+
+.info{
+    margin:30px 11px 0 11px;
+    border-right:3px solid  #177c83ed;
+    border-left:3px solid  #177c83;
+    padding:0px 11px 0 11px;
+    font-size: 17px;
+}

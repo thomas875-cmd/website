@@ -1,0 +1,37 @@
+section#profile-box {
+	background: var(--secondary-background-color);
+	border-radius: 20px;
+}
+section#profile-box div#info {
+	direction: ltr;
+	display: flex;
+	align-items: center;	
+	padding: 20px 10px;
+	margin: 0 30px;
+}
+section#profile-box div#info img { 
+	width: 200px;
+	border-radius: 50%;
+}
+section#profile-box div#info div {
+	direction: ltr;
+	margin-left: 20px;
+}
+section#profile-box div#info div label {
+	font-size: 40px;
+}
+section#profile-box div#actions {
+	direction: ltr;
+	padding: 20px 40px;
+	display: none;
+}
+section#profile-box div#actions button {
+	background: none;
+	border: none;
+	font-size: 50px;
+	cursor: pointer;
+	transition: color .2s;
+}
+section#profile-box div#actions button:hover {
+	color: rgb(236, 81, 81);
+}

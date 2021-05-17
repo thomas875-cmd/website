@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+	<html lang="ar">
+	<head>
+		<meta charset="UTF-8" />
+
+		<meta name="application-name" content="The Arab Future" />
+		<meta name="author" content="The Arab Future" />
+		<meta name="description" content="المستقبل العربي هو موقع يدور حول التكنولوجيا والبرمجة باللغة العربية" />
+		<meta name="keywords" content="The Arab Future, TAF, المستقبل العربي, برمجة, تكونولجيا" />
+
+		<meta name="viewport" content="initial-scale=1.0, width=device-width">
+
+		<meta name="theme-color" content="#4150ff">
+
+		<meta name="og:title" content="المستقبل العربي" />
+		<meta name="og:description" content="المستقبل العربي هو موقع يدور حول التكنولوجيا والبرمجة باللغة العربية" />
+		<meta name="og:image" content="https://i.imgur.com/uNrq9Jw.png" />
+
+		<link type="text/css" rel="stylesheet" href="./static/style/master.css" />
+		<link type="text/css" rel="stylesheet" href="./static/style/navbar.css" />
+
+		<link type="text/css" rel="stylesheet" href="./static/style/profile.css" />
+
+		<script src="https://kit.fontawesome.com/fc66d60180.js" crossorigin="anonymous"></script>
+
+		<title>The Arab Future - Profile</title>
+	</head>
+	<body>
+		<nav>
+			<div id="name">
+				<label>The Arab Future</label>
+			</div>
+			<ul>
+				<li><a href="about.html">معلومات</a></li>
+				<li><a href="blog.html">المدونة</a></li>
+				<li><a href="articles.html">المقالات</a></li>
+				<li><a href="articles.html">المنشورات</a></li>
+			</ul>
+			<div id="buttons">
+				<a href="https://github.com/The-Arab-Future"><i class="fab fa-github"></i></a>
+				<a href="#"><i class="fab fa-facebook"></i></a>
+				<button id="nav-button"><i class="fas fa-bars"></i></button>
+			</div>
+			<div id="profile">
+				الرجاء الانتظار...
+			</div>
+		</nav>	
+		<section id="profile-box" class="container">
+			<div id="info">
+				<img src="./static/images/profile.jpg" alt="Profile" />
+				<div>
+					<label></label>
+				</div>
+			</div>
+			<div id="actions">
+				<button id="logout"><i class="fas fa-sign-out-alt"></i></button>
+			</div>
+		</section>
+		<footer>
+			<h1>The Arab Future</h1>
+			<div id="links">
+				<ul>
+					<li><a href="about.html">معلومات</a></li>
+					<li><a href="blog.html">المدونة</a></li>
+					<li><a href="articles.html">المقالات</a></li>
+				</ul>
+				<ul>
+					<li><a href="privacy.html">سياسة الخصوصيه</a></li>
+					<li><a href="terms.html">شروط الاستخدام</a></li>
+				</ul>
+				<ul>
+					<li><a href="login.html">تسجيل الدخول</a></li>
+					<li><a href="signup.html">إنشاء حساب</a></li>
+				</ul>
+			</div>
+			<div id="social">
+				<a href="https://github.com/The-Arab-Future"><i class="fab fa-github"></i></a>
+				<a href="#"><i class="fab fa-facebook"></i></a>
+			</div>
+			<p>(c) The Arab Future 2021. All Rights Reserved.</p>
+		</footer>
+
+		<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-firestore.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-storage.js"></script>
+
+		<script src="./services/FirebaseService.js"></script>
+		<script src="./services/UserService.js"></script>
+
+		<script src="./static/scripts/Navbar.js"></script>
+
+		<script>
+			const params = new URLSearchParams(window.location.search);
+
+			let uid;
+
+			firebase.auth().onAuthStateChanged( async user => {
+				if(params.get("uid")) {
+					uid = params.get("uid");
+				}
+				else {
+					if(user) {
+
+						uid = user.uid;
+
+						document.getElementById("actions").style.display = "block";
+						document.getElementById("logout").addEventListener("click", () => {
+							firebase.auth().signOut();
+						});
+						
+					}
+					else {
+						window.location = "index.html";
+					}
+				}
+				const userService = new UserService();
+
+				try {
+					const profilePicture = await userService.getProfilePicture(uid);
+					document.querySelector("section#profile-box div#info img").src = profilePicture;
+				
+					
+					const name = await userService.getUsername(uid);
+					document.querySelector("section#profile-box div#info div label").innerText = name;
+				}
+				catch(error) {
+					console.error(error);
+				}
+			});
+
+		</script>
+	</body>
+</html>

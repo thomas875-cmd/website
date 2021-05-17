@@ -2,13 +2,20 @@ document.getElementById("nav-button").addEventListener("click", () => {
 	document.querySelector("nav ul").classList.toggle("opened");
 });
 
-firebase.auth().onAuthStateChanged(user => {
+firebase.auth().onAuthStateChanged( async user => {
 	const element = document.querySelector("nav div#profile");
+	const userService = new UserService();
 
 	if(user) {
-		element.innerHTML = `<img src="./static/images/placeholder.jpg" alt="Profile picture" />
-		<label>اسم المستخدم</label>
-		<a class="button"><i class="fas fa-cog"></i></a>`;
+		let src;
+		try {
+			const URL = await userService.getProfilePicture(user.uid);
+	
+			src = URL;
+		}
+		finally {
+			element.innerHTML = `<a href="profile.html"><img src="${src}" alt="Profile picture" /></a>`;
+		}
 	}
 	else {
 		element.innerHTML = `<a class="login" href="login.html">تسجيل الدخول</a>`;

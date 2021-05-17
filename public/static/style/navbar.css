@@ -44,14 +44,6 @@ nav div#profile img {
 	height: 40px;	
 	border-radius: 50%;
 }
-nav div#profile label {
-	font-size: 15px;
-	margin-right: 20px;
-}
-nav div#profile a.button {
-	font-size: 30px;
-	margin-right: 10px;
-}
 nav div#profile a.login {
 	background: var(--secondary-background-color);
 	font-size: 17px;
@@ -89,9 +81,6 @@ nav div#buttons button {
 	}
 	nav div#profile {
 		flex: 3;
-	}
-	nav div#profile a.button {
-		font-size: 25px;
 	}
 	nav div#buttons {
 		justify-content: flex-end;

@@ -35,3 +35,16 @@ section#profile-box div#actions button {
 section#profile-box div#actions button:hover {
 	color: rgb(236, 81, 81);
 }
+@media (max-width: 1000px) {
+	section#profile-box div#info {
+		flex-direction: column;
+		padding: 30px 0;
+	}
+	section#profile-box div#info div {
+		margin: 0;
+	}
+	section#profile-box div#actions {
+		text-align: center;
+		margin-top: -40px;
+	}
+}
